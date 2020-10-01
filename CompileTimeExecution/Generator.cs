@@ -155,6 +155,10 @@ namespace {memberSymbol.ContainingNamespace.GetFullName()} {{
             }
         }
 
-        public void Initialize(GeneratorInitializationContext context) { }
+        public void Initialize(GeneratorInitializationContext context) {
+#if DEBUG
+            Debugger.Launch();
+#endif
+        }
     }
 }
