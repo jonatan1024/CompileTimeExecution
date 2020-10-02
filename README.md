@@ -60,7 +60,7 @@ Only static properties and methods can be executed. Methods must be parameterles
 ## Requirements and limitations
 ### Requirements
 
-- CompileTimeExecution NuGet package
+- [CompileTimeExecution NuGet package](https://www.nuget.org/packages/CompileTimeExecution)
 
 And for the Source Generators, as stated in the [.NET Blogpost](#more-info-on-source-generators):
 - [.NET 5 preview](https://dotnet.microsoft.com/download/dotnet/5.0)
