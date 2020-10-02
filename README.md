@@ -1,5 +1,8 @@
 # CompileTimeExecution
-Is a [Source Generator](#more-info-on-source-generators) that runs your C# code at compile time and stores the result values into generated classes.
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/CompileTimeExecution)
+[![GitHub license](https://img.shields.io/github/license/jonatan1024/CompileTimeExecution)](https://github.com/jonatan1024/CompileTimeExecution/blob/master/LICENSE.md)
+
+CompileTimeExecution a [Source Generator](#more-info-on-source-generators) that runs your C# code at compile time and stores the result values into generated classes.
 
 That means that upon compilation of this class:
 ```csharp
