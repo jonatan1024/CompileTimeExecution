@@ -5,7 +5,7 @@
 		<Authors>Jonatan Matějka</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/jonatan1024/CompileTimeExecution</RepositoryUrl>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 	</PropertyGroup>
 	<ItemGroup>

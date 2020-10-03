@@ -4,26 +4,29 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Emit;
 using Microsoft.CodeAnalysis.Text;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
 
 namespace CompileTimeExecution
 {
-    [Generator]
-    internal class Generator : ISourceGenerator
+    internal class Generator
     {
         GeneratorExecutionContext context;
         Assembly cteAssembly;
         Compilation cteCompilation;
-        public void Execute(GeneratorExecutionContext context)
+
+        public Generator(GeneratorExecutionContext context)
         {
             this.context = context;
-
+#if DEBUG
+            System.Diagnostics.Debugger.Launch();
+#endif
+        }
+        public void Execute()
+        {
             cteCompilation = CreateCTECompilation();
             cteAssembly = CreateAssembly(cteCompilation);
             if (cteAssembly == null)
@@ -154,11 +157,15 @@ namespace {memberSymbol.ContainingNamespace.GetFullName()} {{
                 return null;
             }
         }
+    }
 
-        public void Initialize(GeneratorInitializationContext context) {
-#if DEBUG
-            Debugger.Launch();
-#endif
-        }
+    /// <summary>
+    /// This is just a boilerplate class to deal with bad API design
+    /// </summary>
+    [Generator]
+    internal class StatelessGenerator : ISourceGenerator
+    {
+        public void Execute(GeneratorExecutionContext context) => new Generator(context).Execute();
+        public void Initialize(GeneratorInitializationContext context) { }
     }
 }
