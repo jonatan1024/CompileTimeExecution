@@ -1,5 +1,8 @@
 # CompileTimeExecution
-Is a [Source Generator](#more-info-on-source-generators) that runs your C# code at compile time and stores the result values into generated classes.
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/CompileTimeExecution)](https://www.nuget.org/packages/CompileTimeExecution)
+[![GitHub license](https://img.shields.io/github/license/jonatan1024/CompileTimeExecution)](https://github.com/jonatan1024/CompileTimeExecution/blob/master/LICENSE.md)
+
+CompileTimeExecution a [Source Generator](#more-info-on-source-generators) that runs your C# code at compile time and stores the result values into generated classes.
 
 That means that upon compilation of this class:
 ```csharp
@@ -57,7 +60,7 @@ Only static properties and methods can be executed. Methods must be parameterles
 ## Requirements and limitations
 ### Requirements
 
-- CompileTimeExecution NuGet package
+- [CompileTimeExecution NuGet package](https://www.nuget.org/packages/CompileTimeExecution)
 
 And for the Source Generators, as stated in the [.NET Blogpost](#more-info-on-source-generators):
 - [.NET 5 preview](https://dotnet.microsoft.com/download/dotnet/5.0)
